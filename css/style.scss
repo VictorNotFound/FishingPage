@@ -1,0 +1,102 @@
+$primary: #fff;
+$secundary: rgb(185, 185, 185);
+
+$border-before: #2f7e80;
+$border-after: #47bdbf;
+
+$shadow: rgba(0, 0, 0, 0.685);
+
+$color-background: rgba(0, 0, 0, 0.15);
+$color-form-background: rgba(0, 0, 0, 0.075);
+
+$font: 'Abril Fatface',
+cursive;
+$size-font: 15px;
+
+body {
+    margin: 0;
+    font-family: $font;
+}
+
+section {
+
+    height: 100vh;
+
+    background: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0px);
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 35rem;
+    box-shadow: 0 0 10rem 0 $shadow;
+    border-radius: 25px;
+    background-color: $color-background;
+    backdrop-filter: blur(3px);
+}
+
+.container input {
+    width: 200px;
+    outline: none;
+    margin: 5px;
+    background-color: $color-form-background;
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px $border-before solid;
+
+    color: $primary;
+    font-family: $font;
+    font-size: $size-font;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.container input::placeholder {
+    color: $secundary;
+    font-family: $font;
+    font-size: $size-font;
+    text-align: center;
+}
+
+.container input:focus {
+    width: 250px;
+    border: 2px $border-after solid;
+
+    color: $primary;
+}
+
+.container button {
+    width: 110px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 2px solid $border-before;
+    cursor: pointer;
+    background-color: $color-form-background;
+    color: $secundary;
+
+    font-family: $font;
+    font-size: $size-font;
+
+    transition: 0.6s;
+}
+
+.container button:hover {
+    color: $primary;
+    width: 140px;
+    border: 2px solid $border-after;
+}
+
+.container h1 {
+    color: $primary;
+}
